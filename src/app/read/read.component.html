@@ -1,0 +1,28 @@
+<div class="container mt-3">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">OrgnizationName</th>
+                <th scope="col">OrgnizationAdd</th>
+                <th scope="col">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usr of readUser">
+                <th scope="row">{{usr.id}}</th>
+                <td>{{usr.FirstName}}</td>
+                <td>{{usr.LastName}}</td>
+                <td>{{usr.Email}}</td>
+                <td>{{usr.Phone}}</td>
+                <td>{{usr.OrgnizationName}}</td>
+                <td>{{usr.OrgnizationAdd}}</td>
+                <td>{{usr.Password}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

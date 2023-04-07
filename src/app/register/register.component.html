@@ -1,0 +1,43 @@
+<div class="container mt-3">
+    <div class="row">
+        <!-- Show Error Message -->
+        <div *ngIf="errMsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{errMsg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div *ngIf="successMsg" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{successMsg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <!-- Close Error Message -->
+
+        <form [formGroup]="userForm" (ngSubmit)="userSubmit()">
+            <div class="col-md-4 mt-2">
+                <input type="text" class="form-control" formControlName="FirstName" placeholder="Enter First Name">
+            </div>
+            <div class="col-md-4 mt-2">
+                <input type="text" class="form-control" formControlName="LastName" placeholder="Enter Last Name">
+            </div>
+            <div class="col-md-4 mt-2">
+                <input type="text" class="form-control" formControlName="Email" placeholder="Enter Email">
+            </div>
+            <div class="col-md-4 mt-2">
+                <input type="text" class="form-control" formControlName="Phone" placeholder="Enter Phone Number">
+            </div>
+            <div class="col-md-4 mt-2">
+                <input type="text" class="form-control" formControlName="OrgnizationName" placeholder="Enter Orgnization Name">
+            </div>
+            <div class="col-md-4 mt-2">
+                <input type="text" class="form-control" formControlName="OrgnizationAdd" placeholder="Enter Orgnization Address">
+            </div>
+            <div class="col-md-4 mt-2">
+                <input type="text" class="form-control" formControlName="Password" placeholder="Enter Password">
+            </div>
+
+            <div class="col-md-4 mt-2">
+                <button class="btn btn-primary btn-lg">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
